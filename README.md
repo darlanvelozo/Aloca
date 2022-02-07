@@ -17,8 +17,8 @@ samples, guidance on mobile development, and a full API reference.
 
 ## comandos git para utilizar no projeto
 
-git add . // adiciona todas as pastas para o commit
-git commit -m "0.3" // faz um commit dos arquivos adicionados, com a descrição de sua versão
-git push -u origin main // envia os arquivos do commit para o github
-git status // para ver a situação atual do dos arquivos
-git clone https://github.com/darlanvelozo/aloca.git // faz o download do repositorio do github
+git add . // adiciona todas as pastas para o commit.
+git commit -m "0.3" // faz um commit dos arquivos adicionados, com a descrição de sua versão.
+git push -u origin main // envia os arquivos do commit para o github.
+git status // para ver a situação atual do dos arquivos.
+git clone https://github.com/darlanvelozo/aloca.git // faz o download do repositorio do github.
