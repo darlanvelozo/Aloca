@@ -1,6 +1,5 @@
 import 'package:aloca/telas/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:aloca/aluguel_class/dados_necessarios.dart';
 
 void main() {
   runApp(const MyApp());

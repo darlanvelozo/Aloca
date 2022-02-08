@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:aloca/aluguel_class/dados_necessarios.dart';
 
+import 'package:aloca/telas/add_page.dart';
+import 'package:aloca/telas/list_page.dart';
+import 'package:aloca/telas/info_page.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -10,11 +14,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final telas = [const ListPage(), const AddPage(), const InfoPage()];
+  int _page = 0;
   @override
   Widget build(BuildContext context) {
-    int _page = 1;
-    var largura = MediaQuery.of(context).size.width;
-    var altura = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         title: const Center(
@@ -38,7 +41,7 @@ class _HomePageState extends State<HomePage> {
           });
         },
       ),
-      body: Container(),
+      body: telas[_page],
     );
   }
 }
