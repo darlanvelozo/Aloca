@@ -10,6 +10,6 @@ class InfoPage extends StatefulWidget {
 class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.yellow);
+    return Container();
   }
 }

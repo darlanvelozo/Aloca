@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:aloca/aluguel_class/dados_necessarios.dart';
 
 import 'package:aloca/telas/add_page.dart';
 import 'package:aloca/telas/list_page.dart';
