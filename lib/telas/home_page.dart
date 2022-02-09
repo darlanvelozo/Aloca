@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final telas = [const ListPage(), const AddPage(), const InfoPage()];
-  int _page = 0;
+  int _page = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
