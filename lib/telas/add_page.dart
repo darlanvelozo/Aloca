@@ -1,4 +1,6 @@
+import 'package:aloca/telas/list_page.dart';
 import 'package:flutter/material.dart';
+import 'package:aloca/aluguel_class/dados_necessarios.dart';
 
 class AddPage extends StatefulWidget {
   const AddPage({Key? key}) : super(key: key);
@@ -10,6 +12,8 @@ class AddPage extends StatefulWidget {
 class _AddPageState extends State<AddPage> {
   final TextEditingController nomeController = TextEditingController();
   final TextEditingController numberController = TextEditingController();
+  final TextEditingController diasController = TextEditingController();
+  List<String> nomes = [];
   final isSelected = <bool>[true, false];
   @override
   Widget build(BuildContext context) {
@@ -89,26 +93,35 @@ class _AddPageState extends State<AddPage> {
                 child: Text("Muletas"),
               ),
             ]),
-            Padding(
-              padding: EdgeInsets.only(
-                  left: largura * 0.39,
-                  right: largura * 0.39,
-                  top: altura * 0.02),
-              child: TextField(
-                controller: numberController,
-                decoration: const InputDecoration(
-                  labelText: "Dias",
-                  hintText: "15 Dias",
-                  border: OutlineInputBorder(),
-                ),
-                keyboardType: TextInputType.number,
-              ),
+            SizedBox(
+              height: altura * 0.02,
             ),
-            ElevatedButton(
-              onPressed: readData,
-              child: const Text("Salvar"),
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.greenAccent.shade200),
+            Row(
+              children: [
+                const Expanded(child: SizedBox()),
+                SizedBox(
+                  width: largura * 0.2,
+                  child: TextField(
+                    controller: diasController,
+                    decoration: const InputDecoration(
+                      labelText: "Dias",
+                      hintText: "15 Dias",
+                      border: OutlineInputBorder(),
+                    ),
+                    keyboardType: TextInputType.number,
+                  ),
+                ),
+                const Expanded(child: SizedBox()),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: altura * 0.02),
+              child: ElevatedButton(
+                onPressed: readData,
+                child: const Text("Salvar"),
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.greenAccent.shade200),
+              ),
             )
           ],
         ),
@@ -119,7 +132,10 @@ class _AddPageState extends State<AddPage> {
   void readData() {
     String nome = nomeController.text;
     String number = numberController.text;
+    String dias = diasController.text;
+    Aluguel a1 = Aluguel(nome, number, dias, isSelected[0]);
     nomeController.clear();
     numberController.clear();
+    diasController.clear();
   }
 }
