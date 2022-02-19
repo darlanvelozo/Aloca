@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-
-import 'package:aloca/telas/add_page.dart';
 import 'package:aloca/telas/list_page.dart';
-import 'package:aloca/telas/info_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,6 +16,7 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController diasController = TextEditingController();
   bool bota = true;
   List<String> nomes = [""];
+  List<String> botaounao = [];
   final isSelected = <bool>[true, false];
   @override
   Widget build(BuildContext context) {
@@ -171,9 +169,7 @@ class _HomePageState extends State<HomePage> {
     String nome = nomeController.text;
     String number = numberController.text;
     String dias = diasController.text;
-    setState(() {
-      nomes.add(nome);
-    });
+
     nomeController.clear();
     numberController.clear();
     diasController.clear();

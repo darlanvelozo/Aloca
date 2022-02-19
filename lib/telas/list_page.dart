@@ -1,3 +1,4 @@
+import 'package:aloca/telas/info_page.dart';
 import 'package:flutter/material.dart';
 
 class ListPage extends StatefulWidget {
@@ -26,8 +27,15 @@ class _ListPageState extends State<ListPage> {
             ListTile(
               title: Text(nome),
               subtitle: Text(widget.bota.toString()),
-              onTap: () {},
-            )
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const InfoPage(),
+                  ),
+                );
+              },
+            ),
         ],
       ),
     );

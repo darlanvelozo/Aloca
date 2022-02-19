@@ -1,4 +1,5 @@
 import 'package:aloca/telas/home_page.dart';
+import 'package:aloca/telas/info_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Aloca',
-      home: HomePage(),
+      home: InfoPage(),
     );
   }
 }
